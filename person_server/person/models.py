@@ -7,7 +7,7 @@ class Gender(models.TextChoices):
 
 
 class Person(models.Model):
-    first_name = models.CharField(max_length=128, null=False, blank=False)
+    first_name = models.CharField(max_length=128, null=True, blank=True)
     last_name = models.CharField(max_length=128, null=False, blank=False)
     gender = models.CharField(max_length=1, choices=Gender.choices)
     birthdate = models.DateField(blank=False, null=False)
