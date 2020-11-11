@@ -6,4 +6,4 @@ install:
   - docker-compose build
 
 script:
-  - docker-compose exec server mypy .
+  - docker-compose run server mypy .
