@@ -1,0 +1,12 @@
+---
+version: '3.4'
+
+services:
+  server:
+    build: 
+      person_server
+    command: 'sh ./start.sh'
+    ports:
+      - '8000:8000'
+    volumes:
+      - './person_server:/opt/person_server'
