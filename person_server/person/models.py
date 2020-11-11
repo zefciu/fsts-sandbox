@@ -14,5 +14,7 @@ class Person(models.Model):
 
     @property
     def full_name(self) -> str:
+        if self.first_name is None:
+            return self.last_name
         return ' '.join([self.first_name, self.last_name])
 
